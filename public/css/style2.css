@@ -1,0 +1,120 @@
+    /* Words after Hover on picture */
+    .column div {
+        position: relative;
+        float: left;
+        width: 300px;
+        height: 200px;
+        margin: 0 0 0 25px;
+        padding: 0;
+    }
+    
+    .column div span {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        z-index: -1;
+        display: block;
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        color: #444;
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        opacity: 0;
+    }
+    
+    a:hover+span {
+        bottom: -36px;
+        opacity: 1;
+    }
+        /*  ##END## */
+    
+            /* Gray Scale */
+    .hover08 a img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    .hover08 a:hover img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+    
+    .wrap-collabsible {
+      margin-bottom: 1.2rem 0;
+    }
+    
+    input[type='checkbox'] {
+      display: none;
+    }
+    
+    .lbl-toggle {
+      display: block;
+    
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      text-align: center;
+    
+      padding: 1rem;
+    
+      color: white;
+      background: darkcyan;
+    
+      cursor: pointer;
+    
+      border-radius: 7px;
+      transition: all 0.25s ease-out;
+    }
+    
+    .lbl-toggle:hover {
+      color: inherit;
+    }
+    
+    .lbl-toggle::before {
+      content: ' ';
+      display: inline-block;
+    
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid currentColor;
+      vertical-align: middle;
+      margin-right: .7rem;
+      transform: translateY(-2px);
+    
+      transition: transform .2s ease-out;
+    }
+    
+    .toggle:checked + .lbl-toggle::before {
+      transform: rotate(90deg) translateX(-3px);
+    }
+    
+    .collapsible-content {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height .25s ease-in-out;
+    }
+    
+    .toggle:checked + .lbl-toggle + .collapsible-content {
+      max-height: 350px;
+    }
+    
+    .toggle:checked + .lbl-toggle {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    .collapsible-content .content-inner {
+      background: inherit;
+      border-bottom: 1px solid cyan;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      padding: .5rem 1rem;
+    }
+
+    
